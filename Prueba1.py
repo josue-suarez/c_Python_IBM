@@ -26,3 +26,5 @@ elif edad < 18 and not casado:
     print("No eres mayor de edad y estás soltero")
 else:
     print("No eres mayor de edad y estás casado")
+
+print("Nuevo cambio")
