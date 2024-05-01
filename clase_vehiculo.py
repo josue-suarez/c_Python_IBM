@@ -1,33 +1,53 @@
+# Crear clase padre Vehiculo
 class Vehiculo():
-    def __init__(self):
-        marca = ""
-        modelo = ""
-        color = "negro"
-        is_arrancado = False
-        is_parado = True
+    def __init__(self, marca, modelo):
+        self.marca = marca
+        self.modelo = modelo
+        self.color = "Negro"
+        self.arrancado = False
+        self.parado = True
     
-    def arrancar():
-        if is_arrancado == False:
-            is_arrancado = True
-            is_parado = False
-            print("Vehículo se ha arrancado.")
-            return ""
-        else:
-            print("Vehículo ya está arrancado")
+    def arrancar(self):
+        self.arrancado = True
+        self.parado = False
     
-    def parrar():
-        if is_arrancado == True:
-            is_arrancado = False
-            is_parado = True
-            print("vehículo se ha parado.")
-            return ""
-        else:
-            print("Vehículo ya está parado")
-    
-    def resumen():
-        print("Estado del vehículo:\n"
-            f"Marca: {self.marca}"
-            f"Modelo: {self.modelo}
-            f"Color: {self.color}"
-            f"Arrancado: {self.is_arrancado}")
-        
+    def parrar(self):
+        self.arrancado = False
+        self.parado = True
+            
+    def resumen(self):
+        print(f"""Estado del vehículo: 
+              Marca: {self.marca} 
+              Modelo: {self.modelo} 
+              Color: {self.color} 
+              Arrancado: {self.arrancado}""")
+
+# Crear instancia miCoche de clase padre Vehiculo
+miCoche = Vehiculo("Renault", "Megane")
+
+# Utilizar métodos comunes
+miCoche.arrancar()
+miCoche.resumen()
+
+# Crear clase Moto que hereda de clase padre Vehiculo
+class Moto(Vehiculo):
+    pass
+
+# Crear instancia miMoto de clase padre Moto, que hereda de clase padre Vehiculo
+miMoto = Moto("Kawasaki", "Ninja")
+
+# Utilizar métodos
+miMoto.color = "Rojo"
+miMoto.arrancar()
+miMoto.resumen()
+
+# Crear clase Quad que herede de clase padre Moto, a su vez de clase padre Vehiculo
+class Quad(Moto):
+    pass
+
+# Crear instancia de clase Quad
+miQuad = Quad("Honda", "Q")
+
+miQuad.color = "Verde"
+miQuad.arrancar()
+miQuad.resumen()
