@@ -31,13 +31,23 @@ miCoche.resumen()
 
 # Crear clase Moto que hereda de clase padre Vehiculo
 class Moto(Vehiculo):
-    pass
+    is_carenado = False
+    def poner_carenado(self):  # Método propio de la clase Moto, no heredado
+        self.is_carenado = True
+    def resumen(self):
+        print(f"""Estado del vehículo: 
+              Marca: {self.marca} 
+              Modelo: {self.modelo} 
+              Color: {self.color} 
+              Arrancado: {self.arrancado}
+              Carenado: {self.is_carenado}""")
 
 # Crear instancia miMoto de clase padre Moto, que hereda de clase padre Vehiculo
 miMoto = Moto("Kawasaki", "Ninja")
 
 # Utilizar métodos
 miMoto.color = "Rojo"
+miMoto.poner_carenado()
 miMoto.arrancar()
 miMoto.resumen()
 
