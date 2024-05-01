@@ -27,4 +27,7 @@ elif edad < 18 and not casado:
 else:
     print("No eres mayor de edad y estás casado")
 
-print("Nuevo cambio")
+# print("Nuevo cambio")
+# print("cursor múltiple")
+# print("cursor múltiple")
+# print("cursor múltiple")
