@@ -24,3 +24,5 @@
 
 # miCoche = Coche()
 # del miCoche  # Eliminar instancia u objeto miCoche
+
+print("hola")
